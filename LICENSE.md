@@ -2,7 +2,7 @@
 
 In addition to the terms of the Mozilla Public License 2.0 (MPL 2.0) provided below, the following additional terms apply to this software:
 
-- The name of the software may not be used to endorse or promote derivative works, except with specific prior written permission or when clearly indicating that the derivative is a mod (e.g., new textures or mild alterations that leave the software largely unchanged or recognizable as the base software, and not merely taking pieces of code or completely rewriting large sections). In the case of massive rewrites or overhauls, standard crediting applies, and the name may not be used for promotion.
+- The name of the software may not be used to endorse or promote derivative works, except with specific prior written permission or for compatible works if it is made clear they are not the original work. In the case of massive rewrites or overhauls, standard crediting applies, and the name may not be used for promotion.
 
 > **Note**: These additional terms **do not need to be included in derivatives** of the software. However, when redistributing the software (in source or binary form), these additional terms **must** be included as part of the conditions listed in section 2 (Redistributions of Source Code and Binary Form).
 
