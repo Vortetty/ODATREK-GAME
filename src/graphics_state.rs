@@ -1,5 +1,6 @@
 use std::{sync::Arc, time::SystemTime};
 
+use log::info;
 use palette::{Okhsv, Srgb, FromColor};
 use winit::window::Window;
 
@@ -78,8 +79,9 @@ impl GraphicsState {
             .duration_since(std::time::UNIX_EPOCH)
             .expect("Time went backwards")
             .as_micros();
-        self.last_frame_time = cur_frame_time;
         let frame_time = cur_frame_time - self.last_frame_time;
+        self.last_frame_time = cur_frame_time;
+        info!("{}fps", (1000.0 / (frame_time as f64 / 1_000_000.0)).round() / 1000.0);
 
         // Create texture view
         let surface_texture = self
