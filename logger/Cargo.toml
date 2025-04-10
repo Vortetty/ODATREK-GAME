@@ -1,0 +1,9 @@
+[package]
+name = "odatrek_logger"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4.40"
+colored = "3.0.0"
+log = "0.4.27"

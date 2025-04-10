@@ -1039,10 +1039,18 @@ name = "odatrek_game"
 version = "0.1.0"
 dependencies = [
  "log",
+ "odatrek_logger",
  "palette",
  "pollster",
  "wgpu",
  "winit",
+]
+
+[[package]]
+name = "odatrek_logger"
+version = "0.1.0"
+dependencies = [
+ "log",
 ]
 
 [[package]]

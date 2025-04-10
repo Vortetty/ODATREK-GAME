@@ -74,6 +74,13 @@ impl GraphicsState {
     }
 
     pub fn render(&mut self) -> u128 {
+        let cur_frame_time = SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .expect("Time went backwards")
+            .as_micros();
+        self.last_frame_time = cur_frame_time;
+        let frame_time = cur_frame_time - self.last_frame_time;
+
         // Create texture view
         let surface_texture = self
             .surface
@@ -89,14 +96,7 @@ impl GraphicsState {
             });
 
         // Renders a rainbow screen
-        let cur_frame_time = SystemTime::now()
-            .duration_since(std::time::UNIX_EPOCH)
-            .expect("Time went backwards")
-            .as_millis();
-        let frame_time = cur_frame_time - self.last_frame_time;
-        println!("{}fps", 1.0 / (frame_time as f64 / 1000.0));
-        self.last_frame_time = cur_frame_time;
-        let hue = (self.last_frame_time % 2000) as f64 / 2000.0 * 360.0;
+        let hue = (self.last_frame_time % 2_000_000) as f64 / 2_000_000.0 * 360.0;
         let color = Srgb::from_color(Okhsv::new(hue, 0.75, 1.0));
 
         let mut encoder = self.device.create_command_encoder(&Default::default());

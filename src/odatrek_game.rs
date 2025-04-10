@@ -9,10 +9,12 @@ use winit::{
 };
 
 use crate::graphics_state::GraphicsState;
+use odatrek_logger::OdatrekLogger;
 
 #[derive(Default)]
 pub struct OdatrekGame {
-    state: Option<GraphicsState>
+    state: Option<GraphicsState>,
+    logger: Option<OdatrekLogger>
 }
 
 impl ApplicationHandler for OdatrekGame {

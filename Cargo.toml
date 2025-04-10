@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 log = "0.4.27"
+odatrek_logger = { version = "0.1.0", path = "logger" }
 palette = "0.7.6"
 pollster = "0.4.0"
 wgpu = "24.0.3"
